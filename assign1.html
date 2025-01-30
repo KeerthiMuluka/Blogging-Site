@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="pics/idea2.png" alt="Logo" class="site-logo"> 
+            <h1 class="main-title">IdeaNest</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#help">Help</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#translate" id="google_translate_element"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Content Section -->
+    <div class="container">
+        <section class="blog-interfaces">
+            <!-- Read-Only Interface -->
+            <div class="read-interface">
+                <h2>Beauty of Srirangam</h2>
+                <p>Srirangam is the foremost of the eight self-manifested shrines (Swayam Vyakata Kshetras ) of Lord Vishnu. Sri Renganatha Swamy temple, established in a 156 acre land, is a great vaishnavite temple dedicated to Lord Vishnu. It is also considered the first, foremost and the most important of the 108 main Vishnu temples.</p>
+                <!-- Author and Date -->
+                <div class="post-info">
+                    <p><strong>Written by:</strong> <span id="author-name">Keerthi Muluka</span></p>
+                    <br>
+                    <p><strong>Published on:</strong> <span id="post-date">January 29, 2025, 10:30 AM</span></p>
+                </div>
+                <img src="pics/pic1.jpg" alt="Sample Image" class="blog-image">
+            </div>
+            
+            
+            <div class="write-interface">
+                <h2>Create a New Blog Post</h2>
+
+                <!-- Input for Author Name -->
+                <label for="author-name">Written by:</label>
+                <input type="text" id="author-name" placeholder="Enter your name" required>
+
+                <!-- Display Date and Time Automatically -->
+                
+                <label for="post-date">Published on:</label>
+                <input type="text" id="post-date" placeholder="date and time" required>
+
+
+                <!-- Blog Content -->
+                <textarea id="blog-content" placeholder="Write your blog post here..." rows="5"></textarea>
+
+                 <!-- Upload Image -->
+                <label for="image-upload">Upload Image (Format: PNG, JPG):</label>
+                <input type="file" id="image-upload" accept=".png, .jpg, .jpeg">
+                
+                <!-- Submit Button -->
+                <button onclick="submitPost()">Publish</button>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="blogs-section">
+        <!-- Sample Blog 1 -->
+        <div class="blog-post">
+            <img src="pics/techi.jpg"  alt="Technology" class="blog-pic">
+            <div class="blog-content">
+                <h2>Evolving Technology: Shaping the Future</h2>
+                <p class="sub-topic">Technology is advancing at an unprecedented rate, revolutionizing every aspect of our lives, from communication to healthcare. Innovations like artificial intelligence, blockchain, and the Internet of Things (IoT) are transforming industries, creating new opportunities, and improving efficiency. Automation is reshaping the workforce, while emerging technologies like quantum computing promise to unlock new frontiers. As technology evolves, it also brings new challenges related to privacy, security, and ethical considerations. Embracing these changes can help us navigate the future and harness technology for a better tomorrow.
+                <p><strong>Written by:</strong> Keerthi Muluka</p>
+                <p><strong>Published on:</strong> January 29, 2025</p>
+            </div>
+        </div>
+    
+        <!-- Sample Blog 2 -->
+        <div class="blog-post">
+            <img src="pics/festiv.jpg" alt="Spiritual Festival" class="blog-pic">
+            <div class="blog-content">
+                <h2>The Spiritual Significance of Temple Festivals</h2>
+                <p class="sub-topic">Temple festivals in India are deeply rooted in spiritual traditions, serving as a connection between the divine and the community. These festivals celebrate gods and goddesses, marking their divine presence and blessings. They bring together vibrant rituals, music, dance, and prayers, creating an atmosphere of devotion and unity. Beyond religious ceremonies, temple festivals strengthen cultural identity and promote social harmony. The spiritual significance lies not only in the rituals but also in fostering a sense of reverence, gratitude, and renewal of faith.</p>
+                <p><strong>Written by:</strong> Harsha Reddy</p>
+                <p><strong>Published on:</strong> January 20, 2025</p>
+            </div>
+        </div>
+    
+        <!-- Sample Blog 3 -->
+        <div class="blog-post">
+            <img src="pics/indian.jpg" alt="Indian Architecture" class="blog-pic">
+            <div class="blog-content">
+                <h2>The Art of Indian Temple Architecture</h2>
+                <p class="sub-topic">Indian temple architecture is a remarkable blend of artistry, spirituality, and engineering that reflects the region's deep cultural heritage. Temples are designed with intricate carvings, towering spires, and vast courtyards that symbolize the divine presence. The architecture varies from region to region, with distinct styles like Dravidian, Nagara, and Vesara found across the country. Temples are built with sacred geometry, aligning perfectly with natural elements like the sun and the moon.
+                <p><strong>Written by:</strong> Radhika Sharma</p>
+                <p><strong>Published on:</strong> January 15, 2025</p>
+            </div>
+        </div>
+    
+        <!-- Sample Blog 4 -->
+        <div class="blog-post">
+            <img src="pics/tels.jpg" alt="Telangana Tourism" class="blog-pic">
+            <div class="blog-content">
+                <h2>A Guide to Telangana Tourism</h2>
+                <p class="sub-topic">Telangana, with its rich history, vibrant culture, and stunning landscapes, is a hidden gem for tourists. From the iconic Charminar and historic Qutb Shahi tombs in Hyderabad to the serene landscapes of Pochampally and the majestic Kakatiya-era forts, there's something for every traveler. The state is also home to natural wonders like the Pakhal Lake and Bhongir Fort, perfect for adventure enthusiasts. Telangana's festivals, delicious cuisine, and traditional handicrafts make it an unforgettable destination.
+                <p><strong>Written by:</strong> Arvind Kumar</p>
+                <p><strong>Published on:</strong> January 10, 2025</p>
+            </div>
+        </div>
+    
+        <!-- Sample Blog 5 -->
+        <div class="blog-post">
+            <img src="pics/spices.jpg" alt="spices" class="blog-pic">
+            <div class="blog-content">
+                <h2>Spices That Heal</h2>
+                <p class="sub-topic">Indian spices are more than just ingredients that enhance the flavor of dishes—they are powerful tools for health. Spices like turmeric, cumin, and ginger are packed with antioxidants and anti-inflammatory properties. They support digestion, boost immunity, and even improve mental clarity. Incorporating these spices into your daily meals can have long-lasting health benefits, from reducing inflammation to balancing blood sugar.
+                <p><strong>Written by:</strong> Meera Naidu</p>
+                <p><strong>Published on:</strong> January 5, 2025</p>
+            </div>
+        </div>
+
+        <!-- Sample Blog 5 -->
+        <div class="blog-post">
+            <img src="pics/yoga.jpeg" alt="Yoga and Meditation" class="blog-pic">
+            <div class="blog-content">
+                <h2>The Benefits of Yoga and Meditation</h2>
+                <p class="sub-topic">Yoga and meditation are ancient practices that promote mental, physical, and spiritual well-being. Yoga involves physical postures and breathing exercises, improving flexibility, strength, and balance. Meditation focuses on calming the mind, reducing stress, and enhancing mindfulness. Together, these practices help in achieving inner peace, mental clarity, and emotional stability. Consistent practice of yoga and meditation has been shown to improve overall health and increase self-awareness.
+                <p><strong>Written by:</strong> Meera Naidu</p>
+                <p><strong>Published on:</strong> January 5, 2025</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About IdeaNest</h3>
+                <p>IdeaNest is a platform where creativity meets words. Discover insightful blogs, share thoughts, and explore a world of ideas.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#help">Help & Support</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@ideanest.com</p>
+                <p>Phone: +91 6281460270</p>
+                <p>Address: Hyderabad, Telangana, India</p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="pics/face.png" alt="Facebook">Facebook</a>
+                <br>
+                <a href="#"><img src="pics/twitt2.png" alt="Twitter">Twitter</a>
+                <br>
+                <a href="#"><img src="pics/insta.jpg" alt="Twitter">Instagram</a>
+                <br>
+                <a href="#"><img src="pics/linked.jpg" alt="Linkedin">Linkedin</a>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 IdeaNest | All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+</body>
+</html>
